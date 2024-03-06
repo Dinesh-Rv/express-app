@@ -24,7 +24,15 @@ const User = sequelize.define('User', {
         allowNull: false,
     },
     is_deleted: {
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
+    },
+    createdBy: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    updatedBy: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
 });
 

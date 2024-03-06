@@ -12,10 +12,14 @@ const Post = sequelize.define('Post', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    is_deleted: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false
-    }
+    createdBy: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    updatedBy: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
 });
 
 Post.belongsTo(User, { foreignKey: 'userId' });
